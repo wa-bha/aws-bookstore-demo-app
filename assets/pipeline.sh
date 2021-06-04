@@ -2,17 +2,26 @@
 
 echo Running pipeline script:
 
+# Run python script to check name and id present
+
+python3 StaticVerification.py
+if [ $? = 1 ]; then
+	echo 'Config not present!'
+	exit -1
+fi
+
+echo 'Config check success! Static test passed'
+
 # Build the application
 npm install
 npm run build
 
 # If the build was unsuccessful, halt
-if [ $? == 0 ] 
-then
+if [ $? == 0 ]; then
 	echo Application built successfully using NPM
 else
 	echo Application build unsuccessful
-	exit 2
+	exit -1
 fi
 
 # Perform some test:

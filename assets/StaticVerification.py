@@ -18,5 +18,6 @@ for path in Path('src').rglob('*.ts'):
 	else:
 		print("SUCCESS: Found name and ID in " + path.name)
 
-print(successFlag)
+if (successFlag == 1):
+	sys.exit(1)
 sys.exit(0)
