@@ -15,6 +15,13 @@ echo 'Config check success! Static test passed'
 npm install
 npm run build
 
+npm run test
+if [ $? = 1 ]; then
+	echo 'Testing failed!'
+	exit -1
+fi
+echo 'Testing check success! Tests passed'
+
 # If the build was unsuccessful, halt
 if [ $? == 0 ]; then
 	echo Application built successfully using NPM
