@@ -1,3 +1,6 @@
+// Name: Bhavit Wadhwa
+// ID: 1516846
+
 export const categories = {
   cooks: "Cookbooks",
   database: "Database",

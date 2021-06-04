@@ -3,7 +3,6 @@
 echo Running pipeline script:
 
 # Run python script to check name and id present
-
 python3 StaticVerification.py
 if [ $? = 1 ]; then
 	echo 'Config not present!'
