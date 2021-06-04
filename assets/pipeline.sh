@@ -23,7 +23,7 @@ cd ../
 # Run git commands (add to repo, commit, push)
 # Commit using supplied commit message ($1)
 git add .
-read -p "Provide commit message" message
+read -p "Provide commit message: " message
 git commit -m "$message"
 git push origin master
 
