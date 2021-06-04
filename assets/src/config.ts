@@ -1,3 +1,7 @@
+// Name: Bhavit Wadhwa
+// ID: 1516846
+
+
 export default {
   apiGateway: {
     REGION: "us-east-1",
